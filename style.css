@@ -10,7 +10,10 @@ body {
     color: #222;
 }
 
-/* Header */
+
+/* =========================
+   Header
+========================= */
 
 header {
     background-color: #172554;
@@ -28,7 +31,10 @@ header p {
     font-size: 16px;
 }
 
-/* Main */
+
+/* =========================
+   Main
+========================= */
 
 main {
     width: 90%;
@@ -38,113 +44,262 @@ main {
 
 main > h2 {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-size: 28px;
 }
 
-.details-book-image {
-    display: block;
-    width: 200px;
-    height: 280px;
-    object-fit: cover;
-    margin: 0 auto 25px;
-    border-radius: 6px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
-}
 
-/* Book Cards */
+/* =========================
+   Book Container
+========================= */
 
 .book-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+
+    /* Four books in one row */
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 35px;
+
+    justify-items: center;
 }
 
+
+/* =========================
+   Book Card
+========================= */
+
 .book-card {
-    background-color: white;
-    padding: 30px;
-    border-radius: 12px;
+    background-color: transparent;
+
     text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
+
+    width: 220px;
+
     transition: 0.3s;
 }
 
-.book-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+
+/* =========================
+   Book Image Link
+========================= */
+
+.book-card a {
+    display: inline-block;
+
+    background-color: transparent;
+
+    padding: 0;
+
+    border-radius: 6px;
+
+    text-decoration: none;
 }
 
+
+/* =========================
+   Book Cover
+========================= */
+
+.book-card img {
+    display: block;
+
+    width: 180px;
+    height: 250px;
+
+    object-fit: cover;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+
+    transition: 0.3s;
+}
+
+
+/* =========================
+   Book Hover Effect
+========================= */
+
+.book-card img:hover {
+    transform: translateY(-10px) scale(1.03);
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.30);
+}
+
+
+/* =========================
+   Book Title
+========================= */
+
 .book-card h3 {
-    font-size: 25px;
+    font-size: 22px;
+
     color: #172554;
+
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+
+/* =========================
+   Book Description
+========================= */
+
+.book-card p {
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   Book Details Card
+========================= */
+
+.details-card {
+    background-color: white;
+
+    max-width: 700px;
+
+    margin: auto;
+
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 3px 12px rgba(0, 0, 0, 0.15);
+
+    text-align: left;
+}
+
+
+/* =========================
+   Details Page Book Image
+========================= */
+
+.details-book-image {
+    display: block;
+
+    width: 200px;
+    height: 280px;
+
+    object-fit: cover;
+
+    margin: 0 auto 25px;
+
+    border-radius: 6px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+
+/* =========================
+   Details Page Title
+========================= */
+
+.details-card h2 {
+    color: #172554;
+
+    font-size: 32px;
+
+    margin-bottom: 25px;
+
+    text-align: center;
+}
+
+
+/* =========================
+   Details Page Text
+========================= */
+
+.details-card p {
+    font-size: 17px;
+
+    line-height: 1.7;
+
     margin-bottom: 15px;
 }
 
-.book-card p {
-    margin-bottom: 20px;
-    line-height: 1.5;
+
+/* =========================
+   Description Heading
+========================= */
+
+.details-card h3 {
+    margin-top: 25px;
+
+    margin-bottom: 10px;
+
+    color: #172554;
 }
 
-.book-card a,
+
+/* =========================
+   Back Button
+========================= */
+
 .back-button {
     display: inline-block;
+
     background-color: #172554;
+
     color: white;
+
     text-decoration: none;
+
     padding: 11px 20px;
+
     border-radius: 6px;
+
+    margin-top: 20px;
+
     transition: 0.3s;
 }
 
-.book-card a:hover,
 .back-button:hover {
     background-color: #2563eb;
 }
 
-/* Book Details */
 
-.details-card {
-    background-color: white;
-    max-width: 700px;
-    margin: auto;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
-}
-
-.details-card h2 {
-    color: #172554;
-    font-size: 32px;
-    margin-bottom: 25px;
-}
-
-.details-card p {
-    font-size: 17px;
-    line-height: 1.7;
-    margin-bottom: 15px;
-}
-
-.details-card h3 {
-    margin-top: 25px;
-    margin-bottom: 10px;
-    color: #172554;
-}
-
-.back-button {
-    margin-top: 20px;
-}
-
-/* Footer */
+/* =========================
+   Footer
+========================= */
 
 footer {
     text-align: center;
+
     background-color: #172554;
+
     color: white;
+
     padding: 20px;
+
     margin-top: 50px;
 }
 
-/* Mobile */
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 1000px) {
+
+    .book-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
 
 @media (max-width: 600px) {
 
@@ -152,8 +307,22 @@ footer {
         font-size: 25px;
     }
 
+    main {
+        width: 92%;
+    }
+
     .book-container {
         grid-template-columns: 1fr;
+    }
+
+    .book-card {
+        width: 250px;
+    }
+
+    .book-card img {
+        width: 180px;
+        height: 250px;
+        margin: auto;
     }
 
     .details-card {
@@ -162,5 +331,10 @@ footer {
 
     .details-card h2 {
         font-size: 26px;
+    }
+
+    .details-book-image {
+        width: 180px;
+        height: 250px;
     }
 }
