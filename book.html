@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,22 +20,32 @@
 
         <div class="details-card">
 
+            <!-- Book Image -->
+            <img id="book-image"
+                 class="details-book-image"
+                 alt="Book Cover">
+
+            <!-- Book Title -->
             <h2 id="book-title"></h2>
 
+            <!-- Author -->
             <p>
                 <strong>Author:</strong>
                 <span id="author"></span>
             </p>
 
+            <!-- Category -->
             <p>
                 <strong>Category:</strong>
                 <span id="category"></span>
             </p>
 
+            <!-- Description -->
             <h3>Description</h3>
 
             <p id="description"></p>
 
+            <!-- Back Button -->
             <a href="index.html" class="back-button">
                 ← Back to Home
             </a>
@@ -46,6 +57,7 @@
     <footer>
         <p>© 2026 Book Information System</p>
     </footer>
+
 
     <script>
 
@@ -62,6 +74,7 @@
 
             python: {
                 title: "Python Programming",
+                image: "images/python.png",
                 author: "Guido van Rossum",
                 category: "Programming",
                 description:
@@ -70,6 +83,7 @@
 
             c: {
                 title: "C Programming",
+                image: "images/c.png",
                 author: "Dennis Ritchie",
                 category: "Procedural Programming",
                 description:
@@ -78,6 +92,7 @@
 
             cpp: {
                 title: "C++ Programming",
+                image: "images/cpp.png",
                 author: "Bjarne Stroustrup",
                 category: "Object-Oriented Programming",
                 description:
@@ -86,11 +101,18 @@
 
         };
 
+
+        // Get book name from URL
         const params = new URLSearchParams(window.location.search);
 
         const selectedBook = params.get("book");
 
+
+        // Display book information
         if (books[selectedBook]) {
+
+            document.getElementById("book-image").src =
+                books[selectedBook].image;
 
             document.getElementById("book-title").textContent =
                 books[selectedBook].title;
@@ -104,7 +126,10 @@
             document.getElementById("description").textContent =
                 books[selectedBook].description;
 
-        } else {
+        }
+
+        // If book does not exist
+        else {
 
             document.getElementById("book-title").textContent =
                 "Book Not Found";
@@ -112,9 +137,13 @@
             document.getElementById("description").textContent =
                 "The selected book does not exist.";
 
+            document.getElementById("book-image").style.display =
+                "none";
+
         }
 
     </script>
 
 </body>
+
 </html>
