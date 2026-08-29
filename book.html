@@ -65,7 +65,7 @@
 
             java: {
                 title: "Java Programming",
-                image: "images/java.png",
+                image: "java.png",
                 author: "James Gosling",
                 category: "Object-Oriented Programming",
                 description:
@@ -74,7 +74,7 @@
 
             python: {
                 title: "Python Programming",
-                image: "images/python.png",
+                image: "python.png",
                 author: "Guido van Rossum",
                 category: "Programming",
                 description:
@@ -83,7 +83,7 @@
 
             c: {
                 title: "C Programming",
-                image: "images/c.png",
+                image: "c.png",
                 author: "Dennis Ritchie",
                 category: "Procedural Programming",
                 description:
@@ -92,7 +92,7 @@
 
             cpp: {
                 title: "C++ Programming",
-                image: "images/cpp.png",
+                image: "cpp.png",
                 author: "Bjarne Stroustrup",
                 category: "Object-Oriented Programming",
                 description:
@@ -102,13 +102,15 @@
         };
 
 
-        // Get book name from URL
+        // Get the selected book from the URL
+
         const params = new URLSearchParams(window.location.search);
 
         const selectedBook = params.get("book");
 
 
         // Display book information
+
         if (books[selectedBook]) {
 
             document.getElementById("book-image").src =
@@ -129,6 +131,7 @@
         }
 
         // If book does not exist
+
         else {
 
             document.getElementById("book-title").textContent =
